@@ -1,0 +1,15 @@
+package com.anytime.developer.model;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Student {
+      
+	  private Integer id;
+	  
+	  private String name;
+	  
+	  private String profile;
+	  
+	  private String gender;
+}

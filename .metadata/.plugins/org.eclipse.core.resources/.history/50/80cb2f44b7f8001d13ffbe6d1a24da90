@@ -1,0 +1,5 @@
+package com.anytime.developer.model;
+
+public class Student {
+
+}

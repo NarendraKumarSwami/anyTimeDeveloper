@@ -1,0 +1,30 @@
+package com.anytime.developer.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.anytime.developer.error.StudentExceptions;
+import com.anytime.developer.model.Student;
+import com.anytime.developer.repository.StudentRepo;
+
+@Service
+public class StudentService {
+	
+
+	  @Autowired
+	  public StudentRepo stRepo;
+       
+	  public Student createStudent(Student st) {
+		     
+		 return stRepo.save(st);
+		  
+	  }
+	  
+	  
+	  public Student getStudentById(Integer id) {
+		      
+		  return stRepo.findById(id).orElseThrow(() -> {
+			    new throw StudentExceptions()"There is no student with this id"+ id
+		  })
+	  }
+}

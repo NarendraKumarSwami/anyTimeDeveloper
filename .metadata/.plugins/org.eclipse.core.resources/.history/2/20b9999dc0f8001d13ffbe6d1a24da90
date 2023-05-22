@@ -1,0 +1,24 @@
+package com.anytime.developer.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.anytime.developer.model.Student;
+
+import jakarta.annotation.PostConstruct;
+
+@RestController
+@RequestMapping("student")
+public class StudentController {
+	
+	@PostMapping("/")
+	private ResponseEntity<Student>  addStudent(){
+		 	return new ResponseEntity<>(null);
+	}
+	
+	
+	
+
+}
